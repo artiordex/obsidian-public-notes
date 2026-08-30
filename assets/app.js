@@ -1,5 +1,7 @@
 const content = document.querySelector("#content");
 const firstDoc = document.querySelector("[data-doc]");
+const links = document.querySelectorAll("[data-doc]");
+const sourceLink = document.querySelector(".source-link");
 
 function escapeHtml(value) {
   return value
@@ -103,6 +105,28 @@ async function loadDocument(path) {
   content.innerHTML = markdownToHtml(markdown);
 }
 
-loadDocument(firstDoc.dataset.doc).catch((error) => {
+links.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    links.forEach((item) => item.classList.remove("active"));
+    link.classList.add("active");
+    sourceLink.href = link.dataset.doc;
+    loadDocument(link.dataset.doc).catch((error) => {
+      content.textContent = error.message;
+    });
+  });
+});
+
+const initialDoc = location.hash === "#chatgpt-cli-install"
+  ? document.querySelector('[data-doc="docs/chatgpt-cli-install.md"]')
+  : firstDoc;
+
+if (initialDoc) {
+  links.forEach((item) => item.classList.remove("active"));
+  initialDoc.classList.add("active");
+  sourceLink.href = initialDoc.dataset.doc;
+}
+
+loadDocument(initialDoc.dataset.doc).catch((error) => {
   content.textContent = error.message;
 });
