@@ -1,4 +1,10 @@
 .DS_Store
+Thumbs.db
 .obsidian/workspace.json
+.obsidian/workspaces.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.trash/
 node_modules/
 dist/
+

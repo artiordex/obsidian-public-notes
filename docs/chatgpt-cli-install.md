@@ -1,3 +1,13 @@
+---
+type: knowledge
+status: published
+created: 2026-08-31
+updated: 2026-09-30
+tags:
+  - knowledge
+  - engineering
+  - codex
+---
 # ChatGPT CLI 설치 방법
 
 작성일: 2026-08-31
@@ -116,3 +126,7 @@ codex login status
 # 로그아웃
 codex logout
 ```
+
+## 관련 문서
+
+[개발자 실무 지식 정리](developer-practical-knowledge.md) · [스타트업에서 Obsidian 활용하기](startup-obsidian-workflow.md)

@@ -1,0 +1,25 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - or:
+        - 'file.inFolder("06 Knowledge")'
+        - 'file.inFolder("docs")'
+    - 'note.type == "knowledge"'
+properties:
+  status:
+    displayName: Status
+  owner:
+    displayName: Owner
+  review_date:
+    displayName: Review date
+views:
+  - type: table
+    name: Knowledge library
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - owner
+      - review_date

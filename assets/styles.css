@@ -108,6 +108,24 @@ h1 {
   max-width: 820px;
 }
 
+.note-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 820px;
+  margin: 0 0 22px;
+}
+
+.note-status,
+.note-tag {
+  border-radius: 999px;
+  padding: 3px 10px;
+  color: var(--accent-strong);
+  background: #e8efec;
+  font-size: 12px;
+  font-weight: 700;
+}
+
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3,
@@ -176,6 +194,42 @@ h1 {
   border: 0;
   border-top: 1px solid var(--line);
   margin: 34px 0;
+}
+
+.markdown-body blockquote,
+.markdown-body .callout {
+  margin: 20px 0;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 18px;
+  background: #f1f5f3;
+}
+
+.markdown-body blockquote p,
+.markdown-body .callout p {
+  margin: 6px 0;
+}
+
+.markdown-body .callout-title {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.markdown-body .task-item {
+  list-style: none;
+  margin-left: -20px;
+}
+
+.markdown-body .task-item input {
+  margin-right: 8px;
+}
+
+.markdown-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 18px 0;
+  border-radius: 8px;
 }
 
 @media (max-width: 760px) {

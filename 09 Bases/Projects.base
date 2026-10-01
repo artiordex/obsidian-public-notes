@@ -1,0 +1,31 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'file.inFolder("03 Projects")'
+    - 'note.type == "project"'
+properties:
+  status:
+    displayName: Status
+  owner:
+    displayName: Owner
+  team:
+    displayName: Team
+  priority:
+    displayName: Priority
+  start_date:
+    displayName: Start date
+  target_date:
+    displayName: Target date
+views:
+  - type: table
+    name: Projects
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+      - status
+      - owner
+      - team
+      - priority
+      - target_date

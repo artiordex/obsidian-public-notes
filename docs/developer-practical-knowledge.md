@@ -1,3 +1,11 @@
+---
+type: knowledge
+status: published
+updated: 2026-09-30
+tags:
+  - knowledge
+  - engineering
+---
 # 개발자 실무 지식 정리 샘플
 
 ## 1. 강의 개요
@@ -371,3 +379,7 @@ AI는 속도와 생산성 도구이지, 책임을 대신하지는 않습니다.
 - GitHub 프로젝트 관리 실습
 
 이 문서는 옵시디언에서 바로 읽기 좋게 구성되어 있으며, 필요하면 더 세분화해서 강의안, 퀴즈, 과제형 자료로 확장할 수 있습니다.
+
+## 관련 문서
+
+[Codex CLI 설치 방법](chatgpt-cli-install.md) · [스타트업에서 Obsidian 활용하기](startup-obsidian-workflow.md)

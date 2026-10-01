@@ -1,0 +1,29 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'file.inFolder("06 Knowledge")'
+    - 'note.type == "research"'
+properties:
+  status:
+    displayName: Status
+  date:
+    displayName: Date
+  owner:
+    displayName: Owner
+  project:
+    displayName: Project
+  participant_count:
+    displayName: Participants
+views:
+  - type: table
+    name: User research
+    groupBy:
+      property: project
+      direction: ASC
+    order:
+      - date
+      - file.name
+      - status
+      - owner
+      - project
+      - participant_count

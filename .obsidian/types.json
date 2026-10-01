@@ -1,0 +1,21 @@
+{
+  "types": {
+    "type": "text",
+    "status": "text",
+    "date": "date",
+    "start_date": "date",
+    "target_date": "date",
+    "decision_date": "date",
+    "review_date": "date",
+    "owner": "text",
+    "team": "text",
+    "project": "text",
+    "tags": "tags",
+    "priority": "text",
+    "period": "text",
+    "source": "text",
+    "attendees": "list",
+    "participant_count": "number",
+    "updated": "date"
+  }
+}

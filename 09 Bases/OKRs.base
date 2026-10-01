@@ -1,0 +1,26 @@
+filters:
+  and:
+    - 'file.ext == "md"'
+    - 'file.inFolder("02 Company/OKRs")'
+    - 'note.type == "okr"'
+properties:
+  period:
+    displayName: Period
+  status:
+    displayName: Status
+  owner:
+    displayName: Owner
+  team:
+    displayName: Team
+views:
+  - type: table
+    name: OKRs
+    groupBy:
+      property: status
+      direction: DESC
+    order:
+      - period
+      - file.name
+      - status
+      - owner
+      - team
